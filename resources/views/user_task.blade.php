@@ -9,6 +9,7 @@
     <form action="{{ url('user_tasks') }}" method="POST">
         @csrf
         <div>
+            <label for="task_name">Task Name</label>
             <input type="text" id="name" name="task_name" value="{{ old('task_name') }}">
             @error('task_name')
                 <div>{{ $message }}</div>
